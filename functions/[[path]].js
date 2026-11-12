@@ -1,5 +1,5 @@
 // 生成ファイル：scripts/shard.py が毎回書き出す。手で直さない（振り分けの式が deploy 側とずれる）
-const N = 2;
+const N = 6;
 const HOST = (s) => `https://medilingo-s${s}.pages.dev`;
 const T = (() => { const t = []; for (let i = 0; i < 256; i++) { let c = i; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; t.push(c >>> 0); } return t; })();
 function crc32(str) { const b = new TextEncoder().encode(str); let c = 0xffffffff; for (const x of b) c = T[(c ^ x) & 0xff] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; }
