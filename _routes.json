@@ -1,0 +1,1 @@
+{"version": 1, "include": ["/en/*", "/ko/*", "/pt/*", "/vi/*", "/zh-hans/*", "/zh-hant/*", "/api/*"], "exclude": ["/_next/*"]}
